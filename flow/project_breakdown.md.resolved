@@ -1,0 +1,212 @@
+# 🧠 Cognitive Bias Detector — Project Breakdown
+
+---
+
+## Stage 1: Project Setup & Foundation
+> *Get the project structure, dependencies, and config in place.*
+
+| Step | What We Do | Output |
+|------|-----------|--------|
+| **1.1** | Create folder structure (`app/`, `api/`, `models/`, `services/`, `tests/`) | Empty project skeleton |
+| **1.2** | Create `requirements.txt` with all dependencies (FastAPI, Transformers, PyTorch, etc.) | Dependency file |
+| **1.3** | Set up `config.py` — bias labels list, model name, threshold, etc. | Central config |
+| **1.4** | Set up `logger.py` — structured logging for all modules | Logging system |
+| **1.5** | Create Pydantic schemas (`schemas.py`) — request/response data models | API contracts |
+
+**After Stage 1 you have:** A clean project skeleton with all configs ready.
+
+---
+
+## Stage 2: Core API Layer
+> *Build the FastAPI server and endpoints (no model yet — just the shell).*
+
+| Step | What We Do | Output |
+|------|-----------|--------|
+| **2.1** | Create `main.py` — FastAPI app instance, CORS, startup/shutdown events | Running server |
+| **2.2** | Create `routes.py` — `POST /analyze` endpoint that accepts text input | API endpoint |
+| **2.3** | Wire up request validation using Pydantic schemas | Input validation |
+| **2.4** | Return a **dummy response** (hardcoded biases) to verify the API works | Testable API |
+
+**After Stage 2 you have:** A running FastAPI server at `localhost:8000` that accepts text and returns a dummy response. You can test it in the browser at `/docs`.
+
+---
+
+## Stage 3: Text Preprocessing
+> *Clean and normalize user input before sending to the model.*
+
+| Step | What We Do | Output |
+|------|-----------|--------|
+| **3.1** | Create `preprocessor.py` | Preprocessing module |
+| **3.2** | Implement text cleaning — trim whitespace, normalize unicode, remove extra spaces | Clean text |
+| **3.3** | Add basic input validation — min/max length checks, empty string handling | Validated input |
+
+**After Stage 3 you have:** A function `preprocess(text) → cleaned_text` that sanitizes any user input.
+
+---
+
+## Stage 4: Model Integration (Zero-Shot)
+> *Plug in the BART zero-shot model — the "brain" of the system.*
+
+| Step | What We Do | Output |
+|------|-----------|--------|
+| **4.1** | Create `inference.py` — load `facebook/bart-large-mnli` model on startup | Loaded model in memory |
+| **4.2** | Build the inference function — takes cleaned text → returns raw scores per bias | Raw scores |
+| **4.3** | Create `bias_selector.py` — apply threshold (0.5) → select detected biases | Filtered bias list |
+| **4.4** | Wire model into the API route — replace dummy response with real predictions | Real predictions |
+
+### How It Works Internally:
+```
+User Input: "Women can't be good engineers"
+         │
+         ▼
+┌─────────────────────────────┐
+│  Zero-Shot Model (BART)     │
+│                             │
+│  Candidate labels:          │
+│  - Stereotyping             │
+│  - Overgeneralization       │
+│  - Confirmation Bias        │
+│  - Emotional Reasoning      │
+│  - False Dilemma            │
+│  - Catastrophizing          │
+│  - Hasty Generalization     │
+│  - Black-and-White Thinking │
+└─────────────────────────────┘
+         │
+         ▼
+  Raw scores:
+    Stereotyping:        0.92
+    Overgeneralization:  0.74
+    Hasty Generalization:0.61
+    Confirmation Bias:   0.15
+    ... (rest below 0.5)
+         │
+         ▼
+  Apply threshold (> 0.5):
+    ✅ Stereotyping:         0.92
+    ✅ Overgeneralization:   0.74
+    ✅ Hasty Generalization: 0.61
+```
+
+**After Stage 4 you have:** A working API that takes text and returns real bias predictions with confidence scores.
+
+---
+
+## Stage 5: Explanation Generator
+> *Generate human-readable explanations for detected biases.*
+
+| Step | What We Do | Output |
+|------|-----------|--------|
+| **5.1** | Create `explainer.py` | Explanation module |
+| **5.2** | Write explanation templates for all 8 biases | Template dictionary |
+| **5.3** | Build function: takes detected biases → combines templates into explanation | Explanation text |
+| **5.4** | Wire into API response | Full response with explanation |
+
+### Example Templates:
+```python
+TEMPLATES = {
+    "Stereotyping": "The statement assigns traits to a group based on "
+                    "group membership rather than individual evidence. "
+                    "This is a form of stereotyping.",
+    
+    "Overgeneralization": "The statement draws a broad conclusion from "
+                          "limited or no evidence, applying it universally. "
+                          "This is overgeneralization.",
+    # ... one for each bias
+}
+```
+
+**After Stage 5 you have:** API returns biases + confidence scores + a human-readable explanation.
+
+---
+
+## Stage 6: Neutral Rewrite Generator
+> *Suggest a less biased version of the input text.*
+
+| Step | What We Do | Output |
+|------|-----------|--------|
+| **6.1** | Create `rewriter.py` | Rewrite module |
+| **6.2** | Build rewrite templates/rules for each bias type | Rewrite logic |
+| **6.3** | Generate rewrite based on detected biases + original text | Rewritten text |
+| **6.4** | Wire into API response | Complete API response |
+
+### Example:
+```
+Input:    "All politicians are corrupt"
+Rewrite:  "While some politicians may engage in corrupt practices, 
+           it is inaccurate to generalize this to all politicians."
+```
+
+**After Stage 6 you have:** The **complete MVP** — biases, scores, explanation, AND a neutral rewrite.
+
+---
+
+## Stage 7: Testing & Validation
+> *Make sure everything works correctly.*
+
+| Step | What We Do | Output |
+|------|-----------|--------|
+| **7.1** | Write unit tests for preprocessor | Test coverage |
+| **7.2** | Write unit tests for bias selector (threshold logic) | Test coverage |
+| **7.3** | Write integration tests for the full API endpoint | End-to-end tests |
+| **7.4** | Test with 20-30 real-world biased statements and evaluate accuracy | Accuracy report |
+| **7.5** | Test edge cases — empty text, very long text, neutral text | Robustness |
+
+**After Stage 7 you have:** A tested, validated MVP with known accuracy metrics.
+
+---
+
+## Stage 8: Polish & Production Readiness
+> *Make it deployment-ready.*
+
+| Step | What We Do | Output |
+|------|-----------|--------|
+| **8.1** | Add proper error handling and HTTP status codes | Robust error responses |
+| **8.2** | Add health check endpoint (`GET /health`) | Monitoring |
+| **8.3** | Create `Dockerfile` for containerized deployment | Docker image |
+| **8.4** | Write `README.md` with setup and usage instructions | Documentation |
+
+---
+
+## Stage 9: Fine-Tune RoBERTa *(Future — Only if needed)*
+> *If zero-shot accuracy isn't good enough, train a custom model.*
+
+| Step | What We Do | Output |
+|------|-----------|--------|
+| **9.1** | Generate synthetic dataset using LLM (500-2000 examples) | Training data |
+| **9.2** | Create training script with RoBERTa + classification head | Training code |
+| **9.3** | Fine-tune on RTX 2050 (batch_size=4, ~30 min) | Trained model |
+| **9.4** | Evaluate and compare accuracy vs zero-shot | Comparison report |
+| **9.5** | Swap model in `inference.py` (just change which model loads) | Upgraded API |
+
+---
+
+## 🔄 Full Workflow (How a request flows through the system)
+
+```mermaid
+flowchart TD
+    A["👤 User sends POST /analyze\n&lcub;&quot;text&quot;: &quot;All old people are bad with tech&quot;&rcub;"] --> B["📥 FastAPI receives request\nValidates input via Pydantic schema"]
+    B --> C["🧹 Preprocessor\nClean, trim, normalize text"]
+    C --> D["🤖 Model Inference\nBART zero-shot classifies text\nagainst 8 bias labels"]
+    D --> E["📊 Bias Selector\nApply threshold 0.5\nFilter detected biases"]
+    E --> F["📝 Explanation Generator\nCombine templates for\ndetected biases"]
+    F --> G["✏️ Rewrite Generator\nCreate neutral version\nof the text"]
+    G --> H["📤 Return JSON Response\nbiases + scores + explanation + rewrite"]
+```
+
+---
+
+## 📅 Estimated Timeline
+
+| Stage | Time Estimate |
+|-------|:---:|
+| **1.** Project Setup | ~30 min |
+| **2.** Core API | ~30 min |
+| **3.** Preprocessing | ~15 min |
+| **4.** Model Integration | ~1 hour |
+| **5.** Explanations | ~30 min |
+| **6.** Rewrites | ~30 min |
+| **7.** Testing | ~1 hour |
+| **8.** Polish | ~30 min |
+| **Total MVP** | **~5 hours** |
+| **9.** Fine-tuning *(optional)* | ~3-4 hours |
