@@ -5,8 +5,10 @@ Stage 5 starts here: this module will first provide template-based
 explanations and later add optional LLM generation with template fallback.
 """
 
+from app.config import LLM_ENABLED
 from app.logger import get_logger
 from app.models.schemas import DetectedBias
+from app.services.llm_explainer import generate_llm_explanation
 
 logger = get_logger(__name__)
 
@@ -63,6 +65,20 @@ def generate_explanation(text: str, biases: list[DetectedBias]) -> str:
         Explanation text for the response payload.
     """
     logger.info("Generating explanation for %d detected biases", len(biases))
+
+    if not biases:
+        return _NO_BIAS_MESSAGE
+
+    # Try LLM first, fall back to templates on any failure
+    if LLM_ENABLED:
+        try:
+            llm_result = generate_llm_explanation(text, biases)
+            if llm_result:
+                logger.info("Using LLM-generated explanation")
+                return llm_result
+        except Exception:
+            logger.warning("LLM explanation failed — falling back to templates", exc_info=True)
+
     return _generate_template_explanation(biases)
 
 
