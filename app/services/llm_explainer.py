@@ -72,5 +72,5 @@ def generate_llm_explanation(text: str, biases: list[DetectedBias]) -> str:
     )
     output = response.text.strip()
 
-    logger.info("Gemini explanation generated (%d chars)", len(output))
+    logger.info("Gemini explanation generated (%d chars): %s", len(output), output)
     return output
