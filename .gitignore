@@ -11,3 +11,5 @@ __pycache__/
 
 # Environment
 .env
+
+test_llm_quality.py
