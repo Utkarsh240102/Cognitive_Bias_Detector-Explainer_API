@@ -47,6 +47,11 @@ TEMPLATES: dict[str, str] = {
 }
 
 
+_NO_BIAS_MESSAGE = (
+    "No strong cognitive bias was detected above the current confidence threshold."
+)
+
+
 def generate_explanation(text: str, biases: list[DetectedBias]) -> str:
     """Generate a human-readable explanation for detected biases.
 
@@ -58,4 +63,20 @@ def generate_explanation(text: str, biases: list[DetectedBias]) -> str:
         Explanation text for the response payload.
     """
     logger.info("Generating explanation for %d detected biases", len(biases))
-    raise NotImplementedError("Template explanations will be added in Step 5.2/5.3.")
+    return _generate_template_explanation(biases)
+
+
+def _generate_template_explanation(biases: list[DetectedBias]) -> str:
+    """Build explanation text from templates for each detected bias."""
+    if not biases:
+        return _NO_BIAS_MESSAGE
+
+    parts = []
+    for bias in biases:
+        template = TEMPLATES.get(bias.type)
+        if template:
+            parts.append(template)
+        else:
+            parts.append(f"A cognitive bias ({bias.type}) was detected.")
+
+    return " ".join(parts)
