@@ -10,6 +10,7 @@ from app.services.preprocessor import preprocess
 from app.services.inference import classify
 from app.services.bias_selector import select_biases
 from app.services.explainer import generate_explanation
+from app.services.rewriter import generate_rewrite
 
 logger = get_logger(__name__)
 
@@ -34,8 +35,8 @@ async def analyze_text(request: AnalyzeRequest):
     # Step 4: Generate explanation
     explanation = generate_explanation(cleaned, biases)
 
-    # Placeholder rewrite — will be replaced in Stage 6
-    neutral_rewrite = request.text
+    # Step 5: Generate neutral rewrite
+    neutral_rewrite = generate_rewrite(cleaned, biases)
 
     return AnalyzeResponse(
         biases=biases,
