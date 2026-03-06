@@ -5,7 +5,7 @@ Model inference — loads BART zero-shot model and classifies text against bias 
 import torch
 from transformers import pipeline
 
-from app.config import MODEL_NAME, DEVICE, BIAS_LABELS
+from app.config import MODEL_NAME, DEVICE, BIAS_LABELS, MODEL_CACHE_DIR
 from app.logger import get_logger
 
 logger = get_logger(__name__)
@@ -21,11 +21,13 @@ def load_model() -> None:
     device = 0 if DEVICE == "cuda" and torch.cuda.is_available() else -1
     device_name = "CUDA (GPU)" if device == 0 else "CPU"
     logger.info("Loading model '%s' on %s...", MODEL_NAME, device_name)
+    logger.info("Model cache directory: %s", MODEL_CACHE_DIR)
 
     _classifier = pipeline(
         "zero-shot-classification",
         model=MODEL_NAME,
         device=device,
+        model_kwargs={"cache_dir": str(MODEL_CACHE_DIR)},
     )
 
     logger.info("Model loaded successfully.")

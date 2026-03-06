@@ -2,9 +2,15 @@
 Central configuration for the Cognitive Bias Detector API.
 """
 
+from pathlib import Path
+
+# ── Project Root ─────────────────────────────────────────────────
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # ── Model Settings ──────────────────────────────────────────────
 MODEL_NAME = "facebook/bart-large-mnli"
 DEVICE = "cuda"  # Will fallback to CPU in inference.py if CUDA unavailable
+MODEL_CACHE_DIR = BASE_DIR / "model_cache"  # Local cache — avoids global downloads
 
 # ── Bias Labels ─────────────────────────────────────────────────
 BIAS_LABELS: list[str] = [

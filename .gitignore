@@ -1,0 +1,13 @@
+# Virtual environment
+myenv/
+
+# Model cache (downloaded weights ~1.6GB)
+model_cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
