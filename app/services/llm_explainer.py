@@ -1,68 +1,75 @@
 """
 LLM-powered explanation generator.
 
-Uses a local Flan-T5 model to produce richer, context-aware explanations
+Uses Google Gemini Flash to produce richer, context-aware explanations
 for detected cognitive biases.  If this module fails for any reason the
 caller (explainer.py) falls back to template-based explanations.
 """
 
 from __future__ import annotations
 
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from google import genai
 
-from app.config import LLM_MODEL_NAME, LLM_MAX_LENGTH, MODEL_CACHE_DIR
+from app.config import GEMINI_API_KEY, GEMINI_MODEL_NAME
 from app.logger import get_logger
 from app.models.schemas import DetectedBias
 
 logger = get_logger(__name__)
 
 # ── Module-level state ──────────────────────────────────────────
-_tokenizer = None
-_model = None
+_client = None
 
 
 def load_llm() -> None:
-    """Load the Flan-T5 tokenizer and model into memory."""
-    global _tokenizer, _model
-    if _model is not None:
-        logger.info("LLM already loaded — skipping.")
+    """Initialise the Gemini client with the API key."""
+    global _client
+    if _client is not None:
+        logger.info("Gemini client already initialised — skipping.")
         return
 
-    cache = str(MODEL_CACHE_DIR)
-    logger.info("Loading LLM '%s' …", LLM_MODEL_NAME)
-    _tokenizer = AutoTokenizer.from_pretrained(LLM_MODEL_NAME, cache_dir=cache)
-    _model = AutoModelForSeq2SeqLM.from_pretrained(LLM_MODEL_NAME, cache_dir=cache)
-    logger.info("LLM loaded successfully.")
+    if not GEMINI_API_KEY or GEMINI_API_KEY == "your-gemini-api-key-here":
+        raise RuntimeError(
+            "GEMINI_API_KEY is not set. Add it to your .env file."
+        )
+
+    logger.info("Initialising Gemini client (model: %s) …", GEMINI_MODEL_NAME)
+    _client = genai.Client(api_key=GEMINI_API_KEY)
+    logger.info("Gemini client ready.")
 
 
 def _build_prompt(text: str, biases: list[DetectedBias]) -> str:
-    """Construct a concise instruction prompt for Flan-T5."""
+    """Construct a concise instruction prompt for Gemini."""
     bias_list = ", ".join(
         f"{b.type} ({b.confidence:.0%})" for b in biases
     )
     return (
-        f"Explain the cognitive biases found in this statement.\n\n"
+        f"You are a cognitive bias expert. Explain the cognitive biases "
+        f"found in this statement in 2-4 sentences. Be specific about "
+        f"WHY each bias applies to THIS statement.\n\n"
         f"Statement: \"{text}\"\n"
         f"Detected biases: {bias_list}\n\n"
-        f"Provide a clear, concise explanation of why each bias applies."
+        f"Provide a clear, concise explanation. Do not use bullet points or "
+        f"lists — write in plain paragraph form."
     )
 
 
 def generate_llm_explanation(text: str, biases: list[DetectedBias]) -> str:
-    """Generate an LLM-powered explanation.
+    """Generate a Gemini-powered explanation.
 
     Raises:
-        RuntimeError: If the LLM model has not been loaded yet.
+        RuntimeError: If the Gemini client has not been initialised.
     """
-    if _model is None or _tokenizer is None:
-        raise RuntimeError("LLM is not loaded. Call load_llm() first.")
+    if _client is None:
+        raise RuntimeError("Gemini client is not initialised. Call load_llm() first.")
 
     prompt = _build_prompt(text, biases)
-    logger.debug("LLM prompt (%d chars): %s", len(prompt), prompt[:120])
+    logger.debug("Gemini prompt (%d chars): %s", len(prompt), prompt[:120])
 
-    inputs = _tokenizer(prompt, return_tensors="pt", truncation=True, max_length=512)
-    outputs = _model.generate(**inputs, max_new_tokens=LLM_MAX_LENGTH, do_sample=False)
-    output = _tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
+    response = _client.models.generate_content(
+        model=GEMINI_MODEL_NAME,
+        contents=prompt,
+    )
+    output = response.text.strip()
 
-    logger.info("LLM explanation generated (%d chars)", len(output))
+    logger.info("Gemini explanation generated (%d chars)", len(output))
     return output
