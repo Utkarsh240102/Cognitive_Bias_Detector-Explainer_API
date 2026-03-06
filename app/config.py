@@ -2,7 +2,13 @@
 Central configuration for the Cognitive Bias Detector API.
 """
 
+import os
 from pathlib import Path
+
+from dotenv import load_dotenv
+
+# ── Load .env ────────────────────────────────────────────────────
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 # ── Project Root ─────────────────────────────────────────────────
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,8 +35,8 @@ CONFIDENCE_THRESHOLD: float = 0.5
 
 # ── LLM Explanation Settings ───────────────────────────────────
 LLM_ENABLED: bool = True                    # Toggle LLM explanations (falls back to templates if False or on failure)
-LLM_MODEL_NAME: str = "google/flan-t5-small"  # Small local text2text model (~300 MB)
-LLM_MAX_LENGTH: int = 256                   # Max tokens for generated explanation
+GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL_NAME: str = "gemini-2.5-flash"  # Gemini 2.5 Flash
 
 # ── Input Constraints ──────────────────────────────────────────
 MIN_TEXT_LENGTH: int = 10
