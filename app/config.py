@@ -27,6 +27,11 @@ BIAS_LABELS: list[str] = [
 # ── Inference Settings ──────────────────────────────────────────
 CONFIDENCE_THRESHOLD: float = 0.5
 
+# ── LLM Explanation Settings ───────────────────────────────────
+LLM_ENABLED: bool = True                    # Toggle LLM explanations (falls back to templates if False or on failure)
+LLM_MODEL_NAME: str = "google/flan-t5-small"  # Small local text2text model (~300 MB)
+LLM_MAX_LENGTH: int = 256                   # Max tokens for generated explanation
+
 # ── Input Constraints ──────────────────────────────────────────
 MIN_TEXT_LENGTH: int = 10
 MAX_TEXT_LENGTH: int = 5000
