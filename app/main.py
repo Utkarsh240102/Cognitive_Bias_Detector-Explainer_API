@@ -8,9 +8,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import router
-from app.config import API_TITLE, API_DESCRIPTION, API_VERSION
+from app.config import API_TITLE, API_DESCRIPTION, API_VERSION, LLM_ENABLED
 from app.logger import get_logger
 from app.services.inference import load_model
+from app.services.llm_explainer import load_llm
 
 logger = get_logger(__name__)
 
@@ -20,6 +21,8 @@ async def lifespan(app: FastAPI):
     """Handle startup and shutdown events."""
     logger.info("Starting up Cognitive Bias Detector API...")
     load_model()
+    if LLM_ENABLED:
+        load_llm()
     yield
     logger.info("Shutting down Cognitive Bias Detector API...")
 
