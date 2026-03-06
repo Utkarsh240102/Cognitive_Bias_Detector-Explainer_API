@@ -48,8 +48,9 @@ def _build_prompt(text: str, biases: list[DetectedBias]) -> str:
         f"WHY each bias applies to THIS statement.\n\n"
         f"Statement: \"{text}\"\n"
         f"Detected biases: {bias_list}\n\n"
-        f"Provide a clear, concise explanation. Do not use bullet points or "
-        f"lists — write in plain paragraph form."
+        f"Provide a clear, concise explanation. Do not use bullet points, "
+        f"lists, or any markdown formatting (no bold, no italics) — write "
+        f"in plain paragraph form using plain text only."
     )
 
 
