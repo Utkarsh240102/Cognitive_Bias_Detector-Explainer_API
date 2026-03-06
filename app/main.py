@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes import router
 from app.config import API_TITLE, API_DESCRIPTION, API_VERSION
 from app.logger import get_logger
+from app.services.inference import load_model
 
 logger = get_logger(__name__)
 
@@ -18,7 +19,7 @@ logger = get_logger(__name__)
 async def lifespan(app: FastAPI):
     """Handle startup and shutdown events."""
     logger.info("Starting up Cognitive Bias Detector API...")
-    # Model loading will be added in Stage 4
+    load_model()
     yield
     logger.info("Shutting down Cognitive Bias Detector API...")
 
