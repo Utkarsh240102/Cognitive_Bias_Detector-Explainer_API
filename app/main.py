@@ -4,8 +4,9 @@ FastAPI application entry point.
 
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 from app.api.routes import router
 from app.config import API_TITLE, API_DESCRIPTION, API_VERSION, LLM_ENABLED
@@ -42,6 +43,21 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# ── Exception Handlers ──────────────────────────────────────────
+@app.exception_handler(ValueError)
+async def value_error_handler(request: Request, exc: ValueError):
+    """Handle preprocessing validation errors (text too short/long)."""
+    logger.warning("Validation error: %s", exc)
+    return JSONResponse(status_code=400, content={"detail": str(exc)})
+
+
+@app.exception_handler(RuntimeError)
+async def runtime_error_handler(request: Request, exc: RuntimeError):
+    """Handle model-not-loaded or other runtime errors."""
+    logger.error("Runtime error: %s", exc)
+    return JSONResponse(status_code=503, content={"detail": str(exc)})
+
 
 # ── Routes ──────────────────────────────────────────────────────
 app.include_router(router)
