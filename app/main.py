@@ -2,17 +2,22 @@
 FastAPI application entry point.
 """
 
+import os
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from app.api.routes import router
 from app.config import API_TITLE, API_DESCRIPTION, API_VERSION, LLM_ENABLED
 from app.logger import get_logger
 from app.services.inference import load_model
 from app.services.llm_explainer import load_llm
+
+STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
 
 logger = get_logger(__name__)
 
@@ -61,4 +66,12 @@ async def runtime_error_handler(request: Request, exc: RuntimeError):
 
 # ── Routes ──────────────────────────────────────────────────────
 app.include_router(router)
+
+# ── Frontend Static Files ───────────────────────────────────────
+if STATIC_DIR.is_dir():
+    app.mount("/assets", StaticFiles(directory=str(STATIC_DIR / "assets")), name="assets")
+
+    @app.get("/", include_in_schema=False)
+    async def serve_frontend():
+        return FileResponse(str(STATIC_DIR / "index.html"))
 
