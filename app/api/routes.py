@@ -4,10 +4,11 @@ API route definitions.
 
 from fastapi import APIRouter
 
+from app.config import API_VERSION
 from app.models.schemas import AnalyzeRequest, AnalyzeResponse, DetectedBias
 from app.logger import get_logger
 from app.services.preprocessor import preprocess
-from app.services.inference import classify
+from app.services.inference import classify, _classifier
 from app.services.bias_selector import select_biases
 from app.services.explainer import generate_explanation
 from app.services.rewriter import generate_rewrite
@@ -15,6 +16,17 @@ from app.services.rewriter import generate_rewrite
 logger = get_logger(__name__)
 
 router = APIRouter()
+
+
+@router.get("/health")
+async def health_check():
+    """Health check endpoint for monitoring and load balancers."""
+    model_ready = _classifier is not None
+    return {
+        "status": "ok" if model_ready else "degraded",
+        "version": API_VERSION,
+        "model_loaded": model_ready,
+    }
 
 
 @router.post("/analyze", response_model=AnalyzeResponse)
