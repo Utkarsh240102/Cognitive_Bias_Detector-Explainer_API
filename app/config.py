@@ -30,7 +30,7 @@ BIAS_LABELS: list[str] = [
     "Black-and-White Thinking",
 ]
 
-# ── Inference Settings ──────────────────────────────────────────
+# ── Inference Settings ─────────────────────────────────────────
 CONFIDENCE_THRESHOLD: float = 0.5
 
 # ── LLM Explanation Settings ───────────────────────────────────
