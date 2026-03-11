@@ -1,16 +1,17 @@
 """
 LLM-powered explanation generator.
 
-Uses Google Gemini Flash to produce richer, context-aware explanations
-for detected cognitive biases.  If this module fails for any reason the
-caller (explainer.py) falls back to template-based explanations.
+Uses Groq (llama-3.3-70b-versatile) to produce richer, context-aware
+explanations for detected cognitive biases.  If this module fails for
+any reason the caller (explainer.py) falls back to template-based
+explanations.
 """
 
 from __future__ import annotations
 
-from google import genai
+from groq import Groq
 
-from app.config import GEMINI_API_KEY, GEMINI_MODEL_NAME
+from app.config import GROQ_API_KEY, GROQ_MODEL_NAME
 from app.logger import get_logger
 from app.models.schemas import DetectedBias
 
@@ -21,24 +22,24 @@ _client = None
 
 
 def load_llm() -> None:
-    """Initialise the Gemini client with the API key."""
+    """Initialise the Groq client with the API key."""
     global _client
     if _client is not None:
-        logger.info("Gemini client already initialised — skipping.")
+        logger.info("Groq client already initialised — skipping.")
         return
 
-    if not GEMINI_API_KEY or GEMINI_API_KEY == "your-gemini-api-key-here":
+    if not GROQ_API_KEY or GROQ_API_KEY == "your-groq-api-key-here":
         raise RuntimeError(
-            "GEMINI_API_KEY is not set. Add it to your .env file."
+            "GROQ_API_KEY is not set. Add it to your .env file."
         )
 
-    logger.info("Initialising Gemini client (model: %s) …", GEMINI_MODEL_NAME)
-    _client = genai.Client(api_key=GEMINI_API_KEY)
-    logger.info("Gemini client ready.")
+    logger.info("Initialising Groq client (model: %s) …", GROQ_MODEL_NAME)
+    _client = Groq(api_key=GROQ_API_KEY)
+    logger.info("Groq client ready.")
 
 
 def _build_prompt(text: str, biases: list[DetectedBias]) -> str:
-    """Construct a concise instruction prompt for Gemini."""
+    """Construct a concise instruction prompt for the LLM."""
     bias_list = ", ".join(
         f"{b.type} ({b.confidence:.0%})" for b in biases
     )
@@ -55,22 +56,22 @@ def _build_prompt(text: str, biases: list[DetectedBias]) -> str:
 
 
 def generate_llm_explanation(text: str, biases: list[DetectedBias]) -> str:
-    """Generate a Gemini-powered explanation.
+    """Generate a Groq-powered explanation.
 
     Raises:
-        RuntimeError: If the Gemini client has not been initialised.
+        RuntimeError: If the Groq client has not been initialised.
     """
     if _client is None:
-        raise RuntimeError("Gemini client is not initialised. Call load_llm() first.")
+        raise RuntimeError("Groq client is not initialised. Call load_llm() first.")
 
     prompt = _build_prompt(text, biases)
-    logger.debug("Gemini prompt (%d chars): %s", len(prompt), prompt[:120])
+    logger.debug("Groq prompt (%d chars): %s", len(prompt), prompt[:120])
 
-    response = _client.models.generate_content(
-        model=GEMINI_MODEL_NAME,
-        contents=prompt,
+    response = _client.chat.completions.create(
+        model=GROQ_MODEL_NAME,
+        messages=[{"role": "user", "content": prompt}],
     )
-    output = response.text.strip()
+    output = response.choices[0].message.content.strip()
 
-    logger.info("Gemini explanation generated (%d chars): %s", len(output), output)
+    logger.info("Groq explanation generated (%d chars): %s", len(output), output)
     return output
