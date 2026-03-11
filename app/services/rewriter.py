@@ -1,15 +1,15 @@
 """
 Neutral rewrite generator.
 
-Uses the already-loaded Gemini client to rephrase biased statements
+Uses the already-loaded Groq client to rephrase biased statements
 into more balanced, neutral language while preserving the core message.
-Falls back to returning the original text unchanged if Gemini is
+Falls back to returning the original text unchanged if Groq is
 unavailable or raises an error.
 """
 
 from __future__ import annotations
 
-from app.config import GEMINI_MODEL_NAME, LLM_ENABLED
+from app.config import GROQ_MODEL_NAME, LLM_ENABLED
 from app.logger import get_logger
 from app.models.schemas import DetectedBias
 from app.services import llm_explainer
@@ -18,7 +18,7 @@ logger = get_logger(__name__)
 
 
 def _build_rewrite_prompt(text: str, biases: list[DetectedBias]) -> str:
-    """Construct the rewrite prompt for Gemini."""
+    """Construct the rewrite prompt for the LLM."""
     bias_list = ", ".join(b.type for b in biases)
     return (
         f"You are an expert editor specialising in neutral, unbiased language. "
@@ -39,7 +39,7 @@ def _build_rewrite_prompt(text: str, biases: list[DetectedBias]) -> str:
 def generate_rewrite(text: str, biases: list[DetectedBias]) -> str:
     """Return a neutral rewrite of *text*.
 
-    If no biases were detected, or if Gemini is disabled / unavailable,
+    If no biases were detected, or if Groq is disabled / unavailable,
     the original text is returned unchanged.
     """
     if not biases:
@@ -52,20 +52,20 @@ def generate_rewrite(text: str, biases: list[DetectedBias]) -> str:
 
     client = llm_explainer._client
     if client is None:
-        logger.warning("Gemini client not initialised — returning original text.")
+        logger.warning("Groq client not initialised — returning original text.")
         return text
 
     prompt = _build_rewrite_prompt(text, biases)
 
     try:
-        logger.info("Requesting neutral rewrite from Gemini …")
-        response = client.models.generate_content(
-            model=GEMINI_MODEL_NAME,
-            contents=prompt,
+        logger.info("Requesting neutral rewrite from Groq …")
+        response = client.chat.completions.create(
+            model=GROQ_MODEL_NAME,
+            messages=[{"role": "user", "content": prompt}],
         )
-        rewrite = response.text.strip()
-        logger.info("Gemini rewrite generated (%d chars): %s", len(rewrite), rewrite)
+        rewrite = response.choices[0].message.content.strip()
+        logger.info("Groq rewrite generated (%d chars): %s", len(rewrite), rewrite)
         return rewrite
     except Exception as exc:
-        logger.warning("Gemini rewrite failed (%s) — returning original text.", exc)
+        logger.warning("Groq rewrite failed (%s) — returning original text.", exc)
         return text
