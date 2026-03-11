@@ -35,8 +35,8 @@ CONFIDENCE_THRESHOLD: float = 0.5
 
 # ── LLM Explanation Settings ───────────────────────────────────
 LLM_ENABLED: bool = True                    # Toggle LLM explanations (falls back to templates if False or on failure)
-GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL_NAME: str = "gemini-3-flash-preview"  # Gemini 2.5 Flash
+GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
+GROQ_MODEL_NAME: str = "llama-3.3-70b-versatile"
 
 # ── Input Constraints ──────────────────────────────────────────
 MIN_TEXT_LENGTH: int = 10
