@@ -21,3 +21,11 @@ static/
 
 # Misc
 test_llm_quality.py
+uvicorn_out.txt
+uvicorn_err.txt
+package-lock.json
+
+# Fine-tuning artifacts
+trained_model/
+results/
+*.pt
