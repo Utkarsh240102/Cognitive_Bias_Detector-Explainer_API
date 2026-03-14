@@ -7,14 +7,14 @@ A FastAPI-powered REST API that detects cognitive biases in text, explains them,
 ```
 User Input  →  Preprocess  →  BART Zero-Shot Classification  →  Bias Selection (threshold 0.5)
                                                                         │
-                        Neutral Rewrite (Gemini)  ←  Explanation (Gemini)  ←─┘
+                        Neutral Rewrite (Groq)  ←  Explanation (Groq)  ←─┘
 ```
 
 1. **Preprocessing** — Cleans and normalizes input text (unicode, whitespace, length validation).
 2. **Classification** — `facebook/bart-large-mnli` performs zero-shot classification against 8 cognitive bias labels.
 3. **Bias Selection** — Filters biases above the 0.5 confidence threshold, sorted by confidence descending.
-4. **Explanation** — Google Gemini 2.5 Flash generates a detailed explanation of each detected bias (falls back to templates if unavailable).
-5. **Neutral Rewrite** — Gemini rewrites the statement in neutral, unbiased language.
+4. **Explanation** — Groq (llama-3.3-70b-versatile) generates a detailed explanation of each detected bias (falls back to templates if unavailable).
+5. **Neutral Rewrite** — Groq rewrites the statement in neutral, unbiased language.
 
 ## Detected Bias Types
 
@@ -33,7 +33,7 @@ User Input  →  Preprocess  →  BART Zero-Shot Classification  →  Bias Selec
 
 - **Framework:** FastAPI + Uvicorn
 - **Classification Model:** facebook/bart-large-mnli (zero-shot)
-- **LLM:** Google Gemini 2.5 Flash (explanations & rewrites)
+- **LLM:** Groq — llama-3.3-70b-versatile (explanations & rewrites)
 - **Validation:** Pydantic v2
 - **Testing:** pytest
 - **Python:** 3.13+
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 Create a `.env` file in the project root:
 
 ```
-GEMINI_API_KEY=your-google-gemini-api-key
+GROQ_API_KEY=your-groq-api-key
 ```
 
 ### 4. Run the server
@@ -83,7 +83,7 @@ Visit [http://localhost:8000/docs](http://localhost:8000/docs) for the interacti
 
 ```bash
 docker build -t bias-detector .
-docker run -p 8000:8000 -e GEMINI_API_KEY=your-key bias-detector
+docker run -p 8000:8000 -e GROQ_API_KEY=your-key bias-detector
 ```
 
 ## API Endpoints
@@ -160,9 +160,9 @@ app/
     preprocessor.py    # Text cleaning & validation
     inference.py       # BART model loading & classification
     bias_selector.py   # Threshold filtering & sorting
-    explainer.py       # Explanation generation (Gemini + template fallback)
-    llm_explainer.py   # Gemini client & prompt building
-    rewriter.py        # Neutral rewrite generation (Gemini)
+    explainer.py       # Explanation generation (Groq + template fallback)
+    llm_explainer.py   # Groq client & prompt building
+    rewriter.py        # Neutral rewrite generation (Groq)
 tests/
   test_preprocessor.py # Preprocessor unit tests (13 tests)
   test_bias_selector.py# Bias selector unit tests (11 tests)
