@@ -32,7 +32,7 @@ def _build_rewrite_prompt(text: str, biases: list[DetectedBias]) -> str:
         f"- Do not lecture or moralize — just rephrase neutrally.\n"
         f"- Do not use markdown formatting, bullet points, bold, or italics.\n"
         f"- Write in plain text only.\n"
-        f"- Output only the rewritten statement, nothing else."
+        f"- Output only the rewritten statement, nothing else"
     )
 
 
