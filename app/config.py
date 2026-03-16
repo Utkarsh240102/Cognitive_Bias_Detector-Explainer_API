@@ -14,7 +14,9 @@ load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # ── Model Settings ──────────────────────────────────────────────
-MODEL_NAME = "facebook/bart-large-mnli"
+USE_FINETUNED_MODEL: bool = True  # True = fine-tuned RoBERTa, False = zero-shot BART
+FINETUNED_MODEL_DIR = BASE_DIR / "trained_model"
+MODEL_NAME = "facebook/bart-large-mnli"  # Fallback zero-shot model
 DEVICE = "cuda"  # Will fallback to CPU in inference.py if CUDA unavailable
 MODEL_CACHE_DIR = BASE_DIR / "model_cache"  # Local cache — avoids global downloads
 
