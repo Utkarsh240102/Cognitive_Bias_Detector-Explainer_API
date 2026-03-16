@@ -1,30 +1,52 @@
 text,Confirmation Bias,Overgeneralization,Stereotyping,Emotional Reasoning,False Dilemma,Catastrophizing,Hasty Generalization,Black-and-White Thinking
+People who drive SUVs are selfish and don't care about the environment.,0,0,0,0,0,0,0,1
+"My favorite historian says that the founding fathers of our country were all libertarians, and I believe him, so I've become a libertarian too.",1,0,0,0,0,0,0,0
+Women who are leaders are bossy and domineering,0,0,1,0,0,0,0,0
+Either a book is a bestseller or it's not worth reading.,0,0,0,0,0,0,0,1
+"People are either naturally smart or they're not, and no amount of studying can change that.",0,0,0,0,0,0,0,1
+"I've only taken a few flights, but the service has always been bad, so all airlines have terrible customer service.",0,0,0,0,0,0,1,0
+Most restaurants have a menu with various food options.,0,0,0,0,0,0,0,0
+"Every time I bring up the topic of gun control, my friends all agree with me that we need more guns, not fewer, so I know I'm in the right.",1,0,0,0,0,0,0,0
+"I've been looking at a lot of data on the topic of crime, and it all confirms my suspicion that the police are corrupt, so I don't trust them at all.",1,0,0,0,0,0,0,0
+Either we prioritize short-term gains or long-term sustainability.,0,0,0,0,1,0,0,0
+The young are often more competitive and driven to succeed.,0,0,1,0,0,0,0,0
+"I've always said that too much screen time is bad for kids, and this new study supports my claim.",1,0,0,0,0,0,0,0
 "If a company doesn't offer flexible work arrangements, it's not a good place to work.",0,0,0,0,0,0,0,1
+Older adults are often sought out for their guidance and advice.,0,0,1,0,0,0,0,0
+The human brain is made up of billions of neurons.,0,0,0,0,0,0,0,0
 "I've talked to a lot of people who have traveled extensively, and they all say that the best way to experience a new culture is to stay in luxury hotels, so that's what I always do.",1,0,0,0,0,0,0,0
 "I feel like I'm being taken advantage of, so I know I need to set some boundaries.",0,0,0,1,0,0,0,0
 "Either we prioritize economic efficiency or social justice, we can't have both.",0,0,0,0,1,0,0,0
 People with tattoos are always rebellious and non-conformist.,0,0,1,0,0,0,0,0
 Men who stay at home with their kids are not real men,0,0,1,0,0,0,0,0
 "You're either a leader or a follower, there's no in between",0,0,0,0,0,0,0,1
-The color of the sky can change depending on the time of day.,0,0,0,0,0,0,0,0
+"Swedes are tall, blonde, and beautiful.",0,0,1,0,0,0,0,0
+"If you don't go to college, you'll never be able to secure a well-paying job and will be stuck in poverty.",0,0,0,0,1,0,0,1
+The largest mammal on Earth is the blue whale.,0,0,0,0,0,0,0,0
+"Older folks usually enjoy quieter, more low-key events.",0,0,1,0,0,0,0,0
+Men are more likely to be engineers or technicians.,0,0,1,0,0,0,0,0
+"I feel like I'm being held back, therefore I'll never reach my potential.",0,0,0,1,0,0,0,0
 "Either you're a risk-taker or a play-it-safe kind of person, you can't be both.",0,0,0,0,1,0,0,0
 "I've met a few entrepreneurs and they were all ruthless, so you have to be ruthless to succeed in business.",0,0,0,0,0,0,1,0
+Every book I've read by that author is boring.,0,1,0,0,0,0,0,0
 The fact that I'm nervous about this test means I'm not prepared.,0,0,0,1,0,0,0,0
 "My boss didn't like my report, I'm definitely going to get fired tomorrow",0,0,0,0,0,1,0,0
 "Studies have shown that people who wear masks are more likely to get sick, I read it online so it must be true.",1,0,0,0,0,0,0,0
 "The new employee is struggling to keep up, they're clearly incompetent and will ruin the entire project.",0,0,0,0,0,1,0,0
 "Asians are naturally good at math and science, it's just part of their culture.",0,0,1,0,0,0,0,0
-"Most professors are absent-minded and forgetful, which makes it difficult for them to keep track of their students' progress.",0,1,1,0,0,0,0,0
-"Because the one time I visited Los Angeles the traffic was terrible, I'm sure the traffic is always awful there.",0,0,1,0,0,0,1,0
+"I feel like I'm being treated unfairly, therefore the system is against me.",0,0,0,1,0,0,0,0
+"The museum is absolutely fascinating, I could spend hours here.",0,0,0,0,0,0,0,1
 "My emotions are screaming at me that this is the right decision, so I'm going to go with it.",0,0,0,1,0,0,0,0
 "Either you're a morning person or you're not, there's no in between",0,0,0,0,0,0,0,1
-The process of photosynthesis occurs in plants.,0,0,0,0,0,0,0,0
+"The news about the recent breakthrough in medical research proves that my donations to the cause were well-spent, and my faith in the scientific community is justified.",1,0,0,0,0,0,0,0
 "I didn't get a response to my email, the recipient must hate me and will never work with me",0,0,0,0,0,1,0,0
 "All teachers are underpaid and overworked, they're just burning out and don't care anymore.",0,0,1,0,0,0,0,0
 The media is obviously biased against my favorite candidate because it makes me angry.,0,0,0,1,0,0,0,0
-"I've met several people who are good at sports and they all have a high protein diet, so a high protein diet must be essential for athletic success.",1,1,0,0,0,0,0,0
+The Mexican musician played the guitar with passion.,0,0,1,0,0,0,0,0
+Individuals of all ages can participate in volunteer work and community service.,0,0,0,0,0,0,0,0
 "I've been noticing that all the happy couples I know have a strong spiritual connection, it's clear that faith is the key to a successful relationship.",1,0,0,0,0,0,0,0
 "If a person doesn't have a large social media following, they're not influential.",0,0,0,0,0,0,0,1
+"I've met two people who are into sports and they were both arrogant, so all athletes must be full of themselves and unpleasant to be around.",0,1,0,0,0,0,1,0
 "I've been reading a lot of books on the topic of relationships, and they all say that the key to a happy marriage is finding someone who is just like you, so that's what I'm looking for.",1,0,0,0,0,0,0,0
 Men who wear pink are always gay,0,1,0,0,0,0,0,0
 The Earth's atmosphere is composed of 78% nitrogen and 21% oxygen.,0,0,0,0,0,0,0,0
@@ -32,53 +54,68 @@ The Earth's atmosphere is composed of 78% nitrogen and 21% oxygen.,0,0,0,0,0,0,0
 "Every person I've met from that country is friendly, so everyone from there must be nice.",0,1,0,0,0,0,0,0
 "My emotions are telling me that this is the wrong choice, so it must be.",0,0,0,1,0,0,0,0
 "I know someone who made a fortune in real estate, so investing in real estate is a sure thing.",0,0,0,0,0,0,1,0
-Many cities have a public transportation system.,0,0,0,0,0,0,0,0
+"I feel anxious about flying, therefore it's not safe.",0,0,0,1,0,0,0,0
 "You're from the city, so you must be used to noise and crowds.",0,0,1,0,0,0,0,0
-"The largest mountain range in the world is the mid-ocean ridge, which is over 65,000 kilometers long.",0,0,0,0,0,0,0,0
+"You're either a team player or a solo player, there's no in between.",0,0,0,0,1,0,0,0
 "If someone is overweight, they must not be disciplined",0,0,1,0,0,0,0,0
 "My brother's friend started a business and it failed, so I think starting your own business is a bad idea.",0,0,0,0,0,0,1,0
-"If you don't go to college, you'll never be able to secure a well-paying job and will be stuck in poverty.",0,0,0,0,1,0,0,1
-The moon is a natural satellite that orbits the Earth.,0,0,0,0,0,0,0,0
+Every senior citizen is frail and weak.,0,1,1,0,0,0,0,0
+"I was right to be skeptical of that new technology, and its recent recall confirms my doubts.",1,0,0,0,0,0,0,0
 All business owners are ruthless and only care about making money.,0,0,1,0,0,0,0,0
 I know that I'm right about this because I'm so passionate about the cause.,0,0,0,1,0,0,0,0
 Every person who is overweight is lazy and lacks self-control,0,1,0,0,0,0,0,0
+"My neighbor's yard is always messy, which just goes to show that some people are naturally lazy.",1,0,0,0,0,0,0,0
 "If you don't like the music festival, then you just don't like music.",0,0,0,0,1,0,0,0
+Young people are always glued to their smartphones.,0,0,1,0,0,0,0,0
 "The restaurant got my order wrong, they're trying to poison me",0,0,0,0,0,1,0,0
 "I've talked to a lot of people who have gotten plastic surgery, and they all say that it's the best decision they ever made, so I'm considering getting some work done.",1,0,0,0,0,0,0,0
 All politicians who promise change are just lying to get votes,0,1,0,0,0,0,0,0
+"I've met a few artists who are disorganized, so I'm sure all artists are messy and disorganized.",0,0,1,0,0,0,1,0
+"My first two attempts at painting resulted in terrible artwork, so I'm certain I have no artistic talent and should just give up.",0,1,0,0,0,0,1,0
+"The fact that it's raining outside means the whole day will be a disaster and everything will go wrong, I can feel the negativity in the air",0,0,0,1,0,1,0,0
 "I've been reading a lot of self-help books, and they all say that the key to happiness is setting goals and achieving them, so I've set a lot of goals for myself.",1,0,0,0,0,0,0,0
+"My aunt went to a certain doctor and got better, so that doctor must be the best in town.",0,0,0,0,0,0,1,0
 "All the people I've met from that company are really smart, so everyone who works there must be a genius.",0,0,0,0,0,0,1,0
 "I didn't get the promotion, my career is over and I'll never be successful",0,0,0,0,0,1,0,0
 "I tried to learn one new language and it was hard, so all languages are difficult to learn.",0,0,0,0,0,0,1,0
 The recent increase in traffic is definitely a sign that the city is becoming unlivable and we'll all be stuck in traffic forever.,0,0,0,0,0,1,0,0
 "I know someone who got a certain degree and they're really successful, so that degree guarantees success.",0,0,0,0,0,0,1,0
-"If you don't have a six-pack by summer, you've clearly failed at taking care of your body.",0,0,0,0,1,0,0,1
+"You're either a natural-born athlete or you'll never amount to anything in sports, there's no in-between.",0,0,0,0,1,0,0,1
+Every person from the city is materialistic and shallow.,0,1,1,0,0,0,0,0
 All rich people are snobbish and look down on the poor,0,1,0,0,0,0,0,0
 "You're a stay-at-home mom, so you must not be contributing to society.",0,0,1,0,0,0,0,0
 "The city is planning to build a new development, it will destroy the entire ecosystem and we'll all die",0,0,0,0,0,1,0,0
-"A person is either a diligent worker or a complete slacker, no one can be somewhere in between.",0,0,0,0,1,0,0,1
+"I've always believed that a positive attitude is key to success, and this self-help book confirms it.",1,0,0,0,0,0,0,0
+The latest developments in the field of science confirm my theory and prove that I'm a visionary thinker.,1,0,0,0,0,0,0,0
+All men are good at fixing cars.,0,1,0,0,0,0,0,0
 The fact that I've been thinking about this problem nonstop means I'm on the verge of a breakthrough.,0,0,0,1,0,0,0,0
 "I tried one type of exercise and didn't see results, so exercise is useless for losing weight.",0,0,0,0,0,0,1,0
 Humans have a unique fingerprint.,0,0,0,0,0,0,0,0
 The average person sleeps for eight hours per night.,0,0,0,0,0,0,0,0
+Indonesians are skilled in crafts and textiles.,0,0,1,0,0,0,0,0
 "I know someone who had a bad experience with a certain type of car, so that type of car is always unreliable.",0,1,0,0,0,0,0,0
-Rivers often flow into oceans.,0,0,0,0,0,0,0,0
+"I feel like I'm not in control, therefore I'm powerless.",0,0,0,1,0,0,0,0
 "I've been having so many nightmares about flying, it's a sign that I should never get on a plane again.",0,0,0,1,0,0,0,0
 People who wear expensive clothes are either fashionable or trying too hard,0,0,0,0,0,0,0,1
+"The fact that my partner is running late means they must be cheating on me and our relationship is doomed, I can feel the dread in my heart",0,0,0,1,0,1,0,0
 "Either we raise taxes or we cut essential services, those are our only choices.",0,0,0,0,1,0,0,0
 I know that this relationship is meant to be because we have such a strong emotional connection.,0,0,0,1,0,0,0,0
 "Either you're a risk-taker or you're not, and if you're not, you'll never be successful.",0,0,0,0,0,0,0,1
-Many animals migrate to different locations during the year.,0,0,0,0,0,0,0,0
+"I feel like I'm running out of time, therefore I'll never accomplish my goals.",0,0,0,1,0,0,0,0
 "If you don't agree with the majority, then you're just being stubborn.",0,0,0,0,1,0,0,0
 "I've been taking this supplement for a few weeks, and I'm already feeling more energized, which is proof that it's working.",1,0,0,0,0,0,0,0
 "I've been looking at a lot of data on the topic of social justice, and it all confirms my suspicion that the system is rigged against certain groups, so I've been advocating for change.",1,0,0,0,0,0,0,0
 "I feel like my boss is out to get me, so I just know I'm going to get fired soon.",0,0,0,1,0,0,0,0
 "I've been following this one financial advisor on YouTube, and he always says that the best investment is gold, so I've invested all my money in gold.",1,0,0,0,0,0,0,0
+"All businesspeople are ruthless and willing to do whatever it takes to get ahead, even if it means stepping on others.",0,1,1,0,0,0,0,0
+Indians are always good at technology.,0,0,1,0,0,0,0,0
 "I've tried a few different types of exercise and they all hurt my joints, so exercise is bad for you.",0,1,0,0,0,0,0,0
 "All the reviews I've read say that this new restaurant is amazing, I'm sure I'll love it when I go there tonight.",1,0,0,0,0,0,0,0
-"I'm terrified of flying and I just know the plane will crash, my fear is overwhelming and it's not just a statistic, it's a guarantee",0,0,0,1,0,1,0,0
+"Some people enjoy spending their free time outdoors, while others prefer indoors.",0,0,0,0,0,0,0,0
+The average person needs 7-9 hours of sleep per night.,0,0,0,0,0,0,0,0
 "My girlfriend is definitely cheating on me, I can feel it in my gut.",0,0,0,1,0,0,0,0
 A typical working week consists of five days.,0,0,0,0,0,0,0,0
+"Water is a clear, colorless liquid at room temperature.",0,0,0,0,0,0,0,0
 "I'm convinced that this new technology is the future of transportation, all the innovators I follow on social media say it's revolutionary.",1,0,0,0,0,0,0,0
 "You're either a fan of the team or you're a hater, there's no in between.",0,0,0,0,1,0,0,0
 "I've been following this one investment advisor on Twitter, and he always says that the best investment is real estate, so I've invested all my money in real estate.",1,0,0,0,0,0,0,0
@@ -89,29 +126,43 @@ A typical working week consists of five days.,0,0,0,0,0,0,0,0
 "People who use public transportation are environmentally conscious, and people who drive are selfish.",0,0,0,0,0,0,0,1
 Everyone in that company is lazy because my cousin's friend who works there always seems unenthusiastic.,0,0,0,0,0,0,1,0
 "I gained a few pounds, I'm definitely going to become morbidly obese and have a heart attack by next year.",0,0,0,0,0,1,0,0
-All athletes are dumb jocks who only care about sports and don't have any intellectual interests.,0,1,1,0,0,0,0,0
+Individuals of different racial backgrounds can hold public office.,0,0,0,0,0,0,0,0
+"I'm convinced that I'll never find true love because I've been rejected once, it's a pattern and my emotions are telling me it's a fact",0,0,0,1,0,1,0,0
+"I once visited a certain type of store and had a great customer service experience, so all stores of that type must have great customer service.",0,0,0,0,0,0,1,0
 You're not a real artist if you don't suffer for your craft.,0,0,0,0,1,0,0,0
+Russians are rugged and cold-resistant.,0,0,1,0,0,0,0,0
 People who wear designer clothes are always trying to impress others.,0,0,1,0,0,0,0,0
-"Atoms are the basic building blocks of matter and consist of protons, neutrons, and electrons.",0,0,0,0,0,0,0,0
+Men are more competitive than women.,0,0,1,0,0,0,0,0
+Every person from California is a hippie.,0,1,1,0,0,0,0,0
+The Canadian hockey player was very tough on the ice.,0,0,1,0,0,0,0,0
+This new appliance is going to break down immediately and be a waste of money.,0,0,0,0,0,1,0,0
 "My intuition is telling me that this person is untrustworthy, so I'm going to avoid them.",0,0,0,1,0,0,0,0
 "I once met a rude person who was wearing a certain type of clothing, so everyone who wears that type of clothing is rude.",0,0,0,0,0,0,1,0
+"The largest planet in our solar system is Jupiter, with a diameter of approximately 142,984 kilometers.",0,0,0,0,0,0,0,0
 "If a politician doesn't support every single one of your views, they're not worth voting for.",0,0,0,0,0,0,0,1
-"Every teacher is overworked and underpaid, which is why they often burn out and leave the profession.",0,1,1,0,0,0,0,0
+"The beach is completely crowded, I've never seen so many people in one place.",0,0,0,0,0,0,0,1
 "African Americans are inherently good at sports, it's in their blood.",0,0,1,0,0,0,0,0
 The largest planet in our solar system is Jupiter.,0,0,0,0,0,0,0,0
 "I've only met one person who identifies as non-binary, but they seem really confused, so non-binary people are just confused about their gender.",0,0,0,0,0,0,1,0
+"If you're not a morning person, then you must be lazy and unproductive for the rest of the day.",0,0,0,0,1,0,0,1
 "I've been to a few different museums and they've all been boring, so all museums are a waste of time.",0,1,0,0,0,0,0,0
 "I know someone who got food poisoning from eating a certain type of food, so that food is always bad for you.",0,1,0,0,0,0,0,0
+The Finnish software engineer was very good at developing apps.,0,0,1,0,0,0,0,0
 "If a company doesn't have a strong social media presence, it's not relevant.",0,0,0,0,0,0,0,1
+The Thai chef was very skilled at making spicy dishes.,0,0,1,0,0,0,0,0
 "Everyone in management is out of touch with the average worker, it's like they live in a different world.",0,1,0,0,0,0,0,0
+"My success in my career is a testament to my intelligence and hard work, and proves that I'm better than my peers.",1,0,0,0,0,0,0,0
 "If you don't have a college degree, you're not intelligent",0,0,0,0,0,0,0,1
+Older people are often praised for their wisdom and life experience.,0,0,1,0,0,0,0,0
 "I've worked with a few different managers and they all were terrible leaders, so I don't trust any manager.",0,1,0,0,0,0,0,0
-"Either you completely trust someone or you don't trust them at all, there's no such thing as a healthy dose of skepticism.",0,0,0,0,1,0,0,1
-"After meeting one rude New Yorker, I'm convinced that everyone from the city is unfriendly and arrogant.",0,0,1,0,0,0,1,0
+Every Muslim is a terrorist.,0,1,1,0,0,0,0,0
+"I'm absolutely thrilled with the new job offer, it's a dream come true.",0,0,0,0,0,0,0,1
 "This decision feels right, so it must be the correct choice.",0,0,0,1,0,0,0,0
 "I've been reading a lot of memoirs by successful entrepreneurs, and they all say that the key to success is taking risks, so I've been taking a lot of risks in my own business.",1,0,0,0,0,0,0,0
 I'm certain that this new exercise routine will get me in shape because I feel so pumped about starting it.,0,0,0,1,0,0,0,0
 Either we prioritize public transportation or we're stuck in traffic forever.,0,0,0,0,1,0,0,0
+Every teacher is underpaid and overworked.,0,1,1,0,0,0,0,0
+"I feel like I'm being judged, therefore people don't like me.",0,0,0,1,0,0,0,0
 The recent natural disaster is definitely a sign that the world is ending and we're all going to die in a catastrophic event.,0,0,0,0,0,1,0,0
 "Every time I eat at that new restaurant, I get food poisoning, so I'm never going back.",0,1,0,0,0,0,0,0
 I know that my lifestyle choices are healthy because all the wellness experts I follow on social media agree with my approach.,1,0,0,0,0,0,0,0
@@ -120,30 +171,45 @@ I know that my lifestyle choices are healthy because all the wellness experts I 
 A typical book has multiple pages.,0,0,0,0,0,0,0,0
 "My coworker's lack of success is clearly due to their poor work ethic, I've seen it time and time again.",1,0,0,0,0,0,0,0
 "You're either a dog person or a cat person, you can't like both equally.",0,0,0,0,0,0,0,1
+Every movie starring my favorite actor is a hit.,0,1,0,0,0,0,0,0
 "If a restaurant doesn't have a Michelin star, it's not worth dining at.",0,0,0,0,0,0,0,1
 "Doctors are always calm and collected, they never get stressed or emotional.",0,0,1,0,0,0,0,0
+The Moroccan rug merchant was very good at selling handmade rugs.,0,0,1,0,0,0,0,0
 "The city is increasing the public transportation fare, this will lead to a massive uprising and riots will erupt.",0,0,0,0,0,1,0,0
-"The human heart pumps around 2,000 gallons of blood per day.",0,0,0,0,0,0,0,0
-"This one bad review means my business will go under and I'll lose everything, I'm consumed by the feeling of impending doom",0,0,0,1,0,1,0,0
-"Since my last two relationships ended badly, I'm convinced all men are untrustworthy and will inevitably break my heart.",0,1,0,0,0,0,1,0
-"The deepest part of the ocean is the Mariana Trench, with a depth of around 11,000 meters.",0,0,0,0,0,0,0,0
+"You're either a creative person or a logical person, there's no middle ground.",0,0,0,0,1,0,0,0
+The average lifespan of a person varies depending on their location and lifestyle.,0,0,0,0,0,0,0,0
+"I bought one product from a company and it was great, so all their products must be great.",0,0,0,0,0,0,1,0
+"If you don't have a high-paying job, then you'll never be successful.",0,0,0,0,1,0,0,0
+"Because the one time I visited Los Angeles the traffic was terrible, I'm sure the traffic is always awful there.",0,0,1,0,0,0,1,0
+I'm sure the plane will crash as soon as we take off.,0,0,0,0,0,1,0,0
 "Either we have a strong sense of community or we're isolated individuals, there's no middle ground.",0,0,0,0,1,0,0,0
+"The largest forest in the world is the Taiga, covering around 17 million square kilometers.",0,0,0,0,0,0,0,0
 All people who are homeless are drug addicts and criminals,0,1,0,0,0,0,0,0
 "If you're not married by 25, you're probably going to end up alone.",0,0,0,0,0,0,0,1
 "People who are not religious are immoral and lacking in values, they need to find God.",0,0,1,0,0,0,0,0
+The Egyptian archaeologist was very passionate about ancient history.,0,0,1,0,0,0,0,0
 You're either a fashion icon or you have no style,0,0,0,0,0,0,0,1
 "I'm unhappy with my life, which means I've made too many bad decisions.",0,0,0,1,0,0,0,0
+Portuguese people are skilled in navigating and exploration.,0,0,1,0,0,0,0,0
+Nigerians are skilled in music and art.,0,0,1,0,0,0,0,0
 "The new policy at work is a huge success, just look at all the positive feedback on the company's social media page.",1,0,0,0,0,0,0,0
 "I know someone who got fired after taking a long break, so taking time off from work is a surefire way to get fired.",0,0,0,0,0,0,1,0
 "All politicians are corrupt and only care about themselves, so it doesn't matter who we vote for.",0,0,1,0,0,0,0,0
 "I once met someone who was really athletic and they were also really smart, so being athletic means you're smart.",0,0,0,0,0,0,1,0
 "Either we have a strong national defense or we're vulnerable to attack, there's no middle ground.",0,0,0,0,1,0,0,0
-"I've met several people who got jobs in their dream field after internships, and they all networked a lot, so networking must be the only way to get your dream job.",1,1,0,0,0,0,0,0
-"The fact that my partner is running late means they must be cheating on me and our relationship is doomed, I can feel the dread in my heart",0,0,0,1,0,1,0,0
-"Having had two bad experiences with used cars, I'm certain that all used cars are lemons and will break down immediately after purchase.",0,1,0,0,0,0,1,0
+Men and women can both participate in competitive sports and fitness activities.,0,0,0,0,0,0,0,0
+People from different cultures wear various types of clothing.,0,0,0,0,0,0,0,0
+"I've met a few quiet engineers, so I'm convinced that all engineers are introverted and shy.",0,0,1,0,0,0,1,0
+The Brazilian capoeira instructor was very energetic and dynamic.,0,0,1,0,0,0,0,0
+"I met one engineer who was also a great artist, so all engineers must have a hidden talent for art.",0,0,0,0,0,0,1,0
+The Italian chef was very good at making pasta.,0,0,1,0,0,0,0,0
 "If a person doesn't travel frequently, they're not cultured.",0,0,0,0,0,0,0,1
+"All the people I know who are good at public speaking joined a debating club in college, so joining a debating club is clearly the way to become a good public speaker.",1,1,0,0,0,0,0,0
 "I've tried a few different types of exercise and they've all been a waste of time, so I'm just going to stick to walking.",0,1,0,0,0,0,0,0
+Filipinos are skilled in caregiving and nursing.,0,0,1,0,0,0,0,0
+"Either we go to the mountains or the beach, those are our only vacation options.",0,0,0,0,1,0,0,0
 "I've been tracking my progress and the numbers clearly show that I'm on track to meet my goals, my strategy is working perfectly.",1,0,0,0,0,0,0,0
+This new technology is going to take over the world and enslave humanity.,0,0,0,0,0,1,0,0
 The largest living species of lizard is the Komodo dragon.,0,0,0,0,0,0,0,0
 I know that this therapy will work for me because it sounds so appealing and I feel hopeful about it.,0,0,0,1,0,0,0,0
 Either you're a competitive athlete or you're not athletic at all.,0,0,0,0,0,0,0,1
@@ -153,110 +219,154 @@ Plants require water and sunlight to grow.,0,0,0,0,0,0,0,0
 "I'm feeling stressed, I must be having a nervous breakdown and will never be able to cope with life again.",0,0,0,0,0,1,0,0
 "I've been reading a lot of books on the topic of economics, and they all say that the best system is capitalism, so I'm a big supporter of it.",1,0,0,0,0,0,0,0
 Typical office hours are from 9 AM to 5 PM.,0,0,0,0,0,0,0,0
-"Since my last few romantic relationships ended badly after we started living together, I'm convinced that cohabitation always leads to relationship problems.",1,1,0,0,0,0,0,0
+"Some people prefer to work independently, while others prefer teamwork.",0,0,0,0,0,0,0,0
+"I've known a few people who got rich by investing in real estate, and they all took big risks, so taking big risks must be the key to getting rich.",1,1,0,0,0,0,0,0
+All people who smoke are unhealthy.,0,1,0,0,0,0,0,0
 Older people are out of touch with technology and can't learn new things.,0,0,1,0,0,0,0,0
+"People from small towns are usually uneducated and conservative, so it's no surprise that they tend to vote for the same politicians every year.",0,1,1,0,0,0,0,0
 People who work in the service industry are uneducated and lack skills,0,0,1,0,0,0,0,0
 Women who don't have children are all selfish and unfulfilled,0,1,0,0,0,0,0,0
+I just know I'll get lost at sea and have to survive on a deserted island with no rescue in sight.,0,0,0,0,0,1,0,0
 "I've been listening to this one podcast for months and they always say the same thing, which is that the government is hiding the truth from us, and I believe it.",1,0,0,0,0,0,0,0
+The Australian surfer was very good at riding waves.,0,0,1,0,0,0,0,0
 "If you're not a morning person, you're clearly not productive",0,1,0,0,0,0,0,0
 "If you don't have a lot of money, you're not successful",0,0,0,0,0,0,0,1
 "People who live in cities are sophisticated, and people who live in the country are backwards.",0,0,0,0,0,0,0,1
 Men are naturally better at sports than women,0,0,1,0,0,0,0,0
-"Because my one friend who is a vegetarian is very health-conscious, I assume all vegetarians are obsessed with their health.",0,0,1,0,0,0,1,0
+"The new employee is totally brilliant, they're going to change the company.",0,0,0,0,0,0,0,1
 The new policy at work is definitely a sign that the company is going bankrupt and we'll all be laid off.,0,0,0,0,0,1,0,0
 "If I don't lose weight, I'll have a heart attack by the time I'm 30",0,0,0,0,0,1,0,0
 The Earth's rotation causes day and night.,0,0,0,0,0,0,0,0
 "I know someone who moved to a new city and loved it, so that city must be a great place to live.",0,0,0,0,0,0,1,0
 The sun is a star at the center of the solar system.,0,0,0,0,0,0,0,0
+Young people tend to be more energetic and have a faster pace of life.,0,0,1,0,0,0,0,0
 "Because I'm feeling hopeless about climate change, it's already too late to make a difference.",0,0,0,1,0,0,0,0
 "You're either a thrill-seeker or you're boring, there's no in between.",0,0,0,0,0,0,0,1
-"I'm so nervous about this first date that I just know it will be a disaster and I'll never hear from them again, my emotions are convinced it's a lost cause",0,0,0,1,0,1,0,0
+Women and men can both be entrepreneurs and start their own businesses.,0,0,0,0,0,0,0,0
+Young adults are more likely to be interested in cutting-edge technology.,0,0,1,0,0,0,0,0
 I just know that this relationship is toxic because it makes me feel unhappy.,0,0,0,1,0,0,0,0
-"Since the few times I've skipped breakfast I felt sluggish, it must be true that skipping breakfast always leads to low energy.",1,1,0,0,0,0,0,0
+The concept of work-life balance is important for overall well-being.,0,0,0,0,0,0,0,0
 "I feel like I'm being judged by my neighbors, which means they're gossiping about me.",0,0,0,1,0,0,0,0
 Doctors are always wealthy and have a high social status,0,0,1,0,0,0,0,0
 "My boss is really demanding, so all managers must be like that.",0,0,0,0,0,0,1,0
+"Since the one musician I know is struggling financially, I believe all musicians are poor.",0,0,1,0,0,0,1,0
+"The new policy is absolutely awful, it's going to ruin the company.",0,0,0,0,0,0,0,1
 "This rain will never stop, we're all going to drown in a flood",0,0,0,0,0,1,0,0
 Either you're a morning coffee drinker or you don't need caffeine,0,0,0,0,0,0,0,1
+"After trying two different diets and not losing weight, I'm pretty sure all diets are ineffective and don't work for anyone.",0,1,0,0,0,0,1,0
 "This traffic is so frustrating, it's clear that the city is not managing it well.",0,0,0,1,0,0,0,0
 You're either a morning workout person or an evening workout person.,0,0,0,0,1,0,0,0
+Poles are hardworking and skilled in manufacturing.,0,0,1,0,0,0,0,0
+"If you don't like the music, then you just don't have good taste.",0,0,0,0,1,0,0,0
 The largest desert in the world is the Antarctic Desert.,0,0,0,0,0,0,0,0
 "I've been feeling really down lately, so I know I must be depressed.",0,0,0,1,0,0,0,0
 "I've been reading a lot of articles on the topic of politics, and they all say that the best system is democracy, so I'm a big supporter of it.",1,0,0,0,0,0,0,0
 "If I'm feeling unconfident about my abilities, I must not be skilled.",0,0,0,1,0,0,0,0
 "My computer crashed, all my files are lost and I'll never recover them",0,0,0,0,0,1,0,0
 "If you don't like spicy food, you have no sense of adventure.",0,0,0,0,1,0,0,0
-"Every politician I've heard of who got into scandals was a lawyer first, which confirms my suspicion that all lawyers are corrupt.",1,1,0,0,0,0,0,0
+The success of my business venture proves that my entrepreneurial skills are superior to others.,1,0,0,0,0,0,0,0
+The cost of higher education can vary significantly depending on location and institution.,0,0,0,0,0,0,0,0
+"I feel nervous about public speaking, therefore I'm a bad speaker.",0,0,0,1,0,0,0,0
 The new policy is obviously a disaster because it makes me so anxious.,0,0,0,1,0,0,0,0
 "I've been reading a lot of blogs on the topic of fitness, and they all say that the best way to get in shape is to do a lot of cardio, so I've been running every day.",1,0,0,0,0,0,0,0
+All students in this school are excellent at math.,0,1,0,0,0,0,0,0
+The Russian weightlifter was very strong and muscular.,0,0,1,0,0,0,0,0
+"If I try out for the team, I'll definitely get injured and be out for the season.",0,0,0,0,0,1,0,0
 "If you don't support the war, then you don't support our troops.",0,0,0,0,1,0,0,0
+"I've met several people who got jobs in their dream field after internships, and they all networked a lot, so networking must be the only way to get your dream job.",1,1,0,0,0,0,0,0
 "I feel really unsure about this decision, so I know I should trust my gut.",0,0,0,1,0,0,0,0
 The atmospheric pressure at sea level is approximately 1013 mbar.,0,0,0,0,0,0,0,0
+Women are more likely to be teachers or nurses.,0,0,1,0,0,0,0,0
 "Having had a poor experience with a product made in China, I believe all products from China are low-quality.",0,0,1,0,0,0,1,0
 The fact that I love this book means it's a classic and will be remembered forever.,0,0,0,1,0,0,0,0
 "The world is running out of resources, we'll all starve to death and civilization will collapse within a decade.",0,0,0,0,0,1,0,0
 "My cousin got a job right out of college, so it's easy to find a job these days.",0,0,0,0,0,0,1,0
 "Athletes are dumb jocks who only care about sports, they're not intelligent or thoughtful.",0,0,1,0,0,0,0,0
-"Every time I've seen a company fail, it was because they didn't adapt to new technology, which confirms that not adapting to new technology will always lead to business failure.",1,1,0,0,0,0,0,0
+The world population is becoming increasingly urbanized.,0,0,0,0,0,0,0,0
+The young are more open to trying new foods.,0,0,1,0,0,0,0,0
 "If a movie doesn't win any awards, it's not a good film.",0,0,0,0,0,0,0,1
 People who go to community college are not as smart as those who go to a four-year university.,0,0,1,0,0,0,0,0
 Every chef is a perfectionist who is obsessed with presentation and will only serve dishes that look perfect.,0,1,1,0,0,0,0,0
 "The speed of light is approximately 299,792 kilometers per second in a vacuum.",0,0,0,0,0,0,0,0
 "Every time I eat at a new restaurant, I get food poisoning, so I'm just going to stick to what I know.",0,1,0,0,0,0,0,0
 "Given that it rained on both days I visited the beach, I'm pretty sure it always rains there and it's not worth visiting.",0,1,0,0,0,0,1,0
+"Every time I've seen a company fail, it was because they didn't adapt to new technology, which confirms that not adapting to new technology will always lead to business failure.",1,1,0,0,0,0,0,0
+Women are more cautious and risk-averse.,0,0,1,0,0,0,0,0
 "Because I'm feeling anxious about the future, it's probably going to be terrible.",0,0,0,1,0,0,0,0
+"This one mistake on my project will ruin my entire career and I'll never be able to show my face again, I'm consumed by the feeling of impending disaster",0,0,0,1,0,1,0,0
 "My emotions are telling me that I'm in love, so I must be ready to get married.",0,0,0,1,0,0,0,0
 The new neighbors are probably serial killers and we're all in grave danger.,0,0,0,0,0,1,0,0
 "My favorite store is having a sale, they must be going out of business and I'll never be able to shop there again.",0,0,0,0,0,1,0,0
 "People with tattoos are reckless and unprofessional, they shouldn't be allowed in the workplace.",0,0,1,0,0,0,0,0
 The new trend in fashion is definitely a sign that society is becoming superficial and we're all doomed to be shallow and materialistic.,0,0,0,0,0,1,0,0
+"I feel frustrated with technology, therefore it's useless.",0,0,0,1,0,0,0,0
 All programmers are introverts who prefer to work alone and have difficulty communicating with others.,0,1,1,0,0,0,0,0
 All IT professionals are nerds because the ones I've met are really into technology.,0,0,0,0,0,0,1,0
-"I just know I'll never recover from this illness and will be bedridden for life, the fear is suffocating me and it's a certainty",0,0,0,1,0,1,0,0
-A book is either a bestseller that everyone loves or it's a complete flop with no literary merit.,0,0,0,0,1,0,0,1
+Every person who practices yoga is spiritual and flexible.,0,1,1,0,0,0,0,0
+All people with tattoos are rebellious and troubled.,0,1,1,0,0,0,0,0
 "If you're not a fan of classical music, you have no culture",0,1,0,0,0,0,0,0
-"Every time I've eaten at a new restaurant and gotten food poisoning, it was a place that served exotic food, so I'm convinced that all exotic cuisine is bad for you.",1,1,0,0,0,0,0,0
+"If you don't study every day, then you'll never pass the exam.",0,0,0,0,1,0,0,0
+The global population is projected to continue growing in the coming decades.,0,0,0,0,0,0,0,0
+I just know I'll get stuck in traffic and be late for my appointment.,0,0,0,0,0,1,0,0
 "I've tried a few different types of music and I didn't like any of them, so music is not for me.",0,1,0,0,0,0,0,0
 "If you don't agree with the expert, then you must be misinformed.",0,0,0,0,1,0,0,0
+The Irish folk singer was very good at telling stories through song.,0,0,1,0,0,0,0,0
 "I've been feeling really frustrated with this process, so I know it's not working.",0,0,0,1,0,0,0,0
+"A decision is either perfectly rational or it's completely irrational, with no room for nuance or context.",0,0,0,0,1,0,0,1
 "I did some research online and found a study that proves my point, which is that eating too much sugar doesn't really cause any health problems.",1,0,0,0,0,0,0,0
 "I've met a few people from that city and they were all rude, so I'm not going back.",0,1,0,0,0,0,0,0
+Men are more likely to be in positions of power.,0,0,1,0,0,0,0,0
 People from small towns are friendlier and more welcoming than city people.,0,0,1,0,0,0,0,0
 The water cycle involves the continuous movement of water on Earth.,0,0,0,0,0,0,0,0
 "I just know that if I don't move to a big city, I'll never be successful and will be stuck in a dead-end job.",0,0,0,0,0,1,0,0
+I'm sure the environmental disaster is going to happen soon and we'll all have to flee the planet.,0,0,0,0,0,1,0,0
+"She's a perfect singer, her voice is flawless in every way.",0,0,0,0,0,0,0,1
 The largest snowflake ever recorded was 38 centimeters in diameter and 20 centimeters thick.,0,0,0,0,0,0,0,0
 "Most lawyers are greedy and only care about making money, which is why they often take on cases that are clearly unjust.",0,1,1,0,0,0,0,0
+"I feel tired of trying, therefore it's not worth it.",0,0,0,1,0,0,0,0
 You're not a real activist if you don't attend every protest.,0,0,0,0,1,0,0,0
 "The water cycle involves evaporation, condensation, and precipitation.",0,0,0,0,0,0,0,0
 "If you don't learn a new language by the time you're 10, you'll never be fluent, it's a fact.",0,1,0,0,0,0,0,0
 "I'm feeling anxious, I must have a severe mental illness and will never be able to function normally again.",0,0,0,0,0,1,0,0
+"I have a friend who is really into reading and is smart, so all people who read a lot must be smarter.",0,0,0,0,0,0,1,0
 "I've been to a few different beaches and they've all been crowded, so all beaches are too busy.",0,1,0,0,0,0,0,0
 Either a city is bustling and exciting or it's boring and dull.,0,0,0,0,0,0,0,1
 "I tried one vegan restaurant and didn't like it, so vegan food is clearly not for me.",0,0,0,0,0,0,1,0
+Elderly individuals tend to prefer traditional cuisine.,0,0,1,0,0,0,0,0
 "I've been talking to my friends, and we all agree that the best way to spend a weekend is by going on a hike or doing something outdoors.",1,0,0,0,0,0,0,0
+"The recent natural disaster is a clear example of how climate change is real and devastating, just like I've been warning.",1,0,0,0,0,0,0,0
 "Since I'm feeling frustrated with my team, they must not be working hard enough.",0,0,0,1,0,0,0,0
 The sun rises in the east and sets in the west due to the Earth's rotation.,0,0,0,0,0,0,0,0
 "If the new policy is implemented, it will definitely lead to the downfall of our economy and we'll all be bankrupt.",0,0,0,0,0,1,0,0
+I'm definitely going to say something stupid and offend someone at the meeting.,0,0,0,0,0,1,0,0
 The new vaccine is probably a government experiment to control our minds and we'll all be brainwashed.,0,0,0,0,0,1,0,0
 "If you don't exercise every day, you're unhealthy and lazy",0,1,0,0,0,0,0,0
 "My favorite TV show was cancelled, the network is clearly going bankrupt and will never produce anything good again.",0,0,0,0,0,1,0,0
 All vegetarian food is tasteless and boring,0,1,0,0,0,0,0,0
-"All the people I know who are good at public speaking joined a debating club in college, so joining a debating club is clearly the way to become a good public speaker.",1,1,0,0,0,0,0,0
+Individuals of different racial backgrounds can experience varying levels of socioeconomic inequality.,0,0,0,0,0,0,0,0
 "If you don't want to take risks, then you're just not ambitious.",0,0,0,0,1,0,0,0
+The Portuguese sailor was very good at navigating the sea.,0,0,1,0,0,0,0,0
 "I feel really uneasy around this person, so they must be a bad influence.",0,0,0,1,0,0,0,0
 People who are over 60 should just retire and not bother trying to work,0,0,1,0,0,0,0,0
-"The thought of growing old and alone is too much to bear, I'm already mourning the loss of my youth and it's only a matter of time before I'm completely isolated",0,0,0,1,0,1,0,0
+Different professions require unique skills and training.,0,0,0,0,0,0,0,0
 "If you don't want to get married, then you're just not committed to love.",0,0,0,0,1,0,0,0
 "The last movie I saw was boring, so movies are just not as good as they used to be.",0,0,0,0,0,0,1,0
+Women are more interested in cooking and cleaning.,0,0,1,0,0,0,0,0
 Men are inherently competitive and make better leaders in business.,0,0,1,0,0,0,0,0
+"My experience with public transportation shows that it's always late and inefficient, just like I've been saying.",1,0,0,0,0,0,0,0
+The Irish writer was very good at telling stories.,0,0,1,0,0,0,0,0
 "The sales numbers from last quarter clearly show that our marketing strategy is working, we just need to keep doing what we're doing.",1,0,0,0,0,0,0,0
+"Either you're a scientist or an artist, you can't be both.",0,0,0,0,1,0,0,0
+This article about the importance of work-life balance reinforces my decision to prioritize my personal life.,1,0,0,0,0,0,0,0
 "If you're not first, you're last, there's no room for second place.",0,0,0,0,1,0,0,0
 Most cars have four wheels.,0,0,0,0,0,0,0,0
 Everyone who drives a sports car is showing off because my neighbor who has one is really arrogant.,0,0,0,0,0,0,1,0
 "My emotions are telling me that I need to forgive this person, so I'm going to let it go.",0,0,0,1,0,0,0,0
 "My aunt took a certain supplement and felt better, so it must work for everyone.",0,0,0,0,0,0,1,0
-"Every good chef I've met has a European culinary education, which confirms that European culinary schools are the only place to get a real culinary education.",1,1,0,0,0,0,0,0
+The impact of technology on daily life is a common topic of discussion.,0,0,0,0,0,0,0,0
+Men are more likely to take risks.,0,0,1,0,0,0,0,0
 "Since both of my friends who started their own businesses failed, I'm sure all startups are doomed to fail and it's not worth the risk.",0,1,0,0,0,0,1,0
+British people have bad teeth and love tea.,0,0,1,0,0,0,0,0
 "You're a journalist, so you must be well-informed about current events.",0,0,1,0,0,0,0,0
 The planet Venus is the hottest planet in the solar system.,0,0,0,0,0,0,0,0
 "I only follow experts on social media who agree with my views on economics, and they all say that our current system is the best one.",1,0,0,0,0,0,0,0
@@ -271,12 +381,16 @@ Every person who drives a sports car is a reckless driver,0,1,0,0,0,0,0,0
 The temperature in Celsius can be converted to Fahrenheit using a formula.,0,0,0,0,0,0,0,0
 I've had a few bad experiences with a certain type of food and now I don't eat it at all.,0,1,0,0,0,0,0,0
 "Either a book is a classic or it's a waste of time, there's no middle ground.",0,0,0,0,0,0,0,1
+"The restaurant is absolutely terrible, the food is overpriced and underseasoned.",0,0,0,0,0,0,0,1
+Older people may not fully understand the concept of social media.,0,0,1,0,0,0,0,0
 "Since my neighbor's kid got into a good college by studying a lot, it's clear that any kid who studies hard will get into a great college.",1,1,0,0,0,0,0,0
 All athletes are arrogant and selfish,0,1,0,0,0,0,0,0
+Older people may be more set in their ways and resistant to change.,0,0,1,0,0,0,0,0
 People who wear glasses are usually more intelligent,0,0,1,0,0,0,0,0
 I'm so upset about what happened that I know I'll never get over it.,0,0,0,1,0,0,0,0
 I'm positive that this product is the best on the market because the advertisement really resonated with me.,0,0,0,1,0,0,0,0
 "If you don't like your job, you should just quit and start your own business, it's that simple.",0,0,0,0,1,0,0,0
+Older adults often have a more classic and timeless sense of style.,0,0,1,0,0,0,0,0
 "All my friends are in long-term relationships, and they all say that the key to success is communication, which is what I've been focusing on.",1,0,0,0,0,0,0,0
 "All politicians are corrupt and only care about themselves, that's why I don't vote anymore.",0,1,0,0,0,0,0,0
 "My coworker who is from a small town is very friendly, so I think everyone from small towns is warm and welcoming.",0,0,1,0,0,0,1,0
