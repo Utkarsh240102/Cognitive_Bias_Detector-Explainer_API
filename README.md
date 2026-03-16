@@ -5,13 +5,13 @@ A FastAPI-powered REST API that detects cognitive biases in text, explains them,
 ## How It Works
 
 ```
-User Input  →  Preprocess  →  BART Zero-Shot Classification  →  Bias Selection (threshold 0.5)
-                                                                        │
-                        Neutral Rewrite (Groq)  ←  Explanation (Groq)  ←─┘
+User Input  →  Preprocess  →  Fine-Tuned RoBERTa Classification  →  Bias Selection (threshold 0.5)
+                                                                              │
+                            Neutral Rewrite (Groq)  ←  Explanation (Groq)  ←──┘
 ```
 
 1. **Preprocessing** — Cleans and normalizes input text (unicode, whitespace, length validation).
-2. **Classification** — `facebook/bart-large-mnli` performs zero-shot classification against 8 cognitive bias labels.
+2. **Classification** — Fine-tuned RoBERTa-base multi-label classifier (falls back to BART zero-shot if `USE_FINETUNED_MODEL=False` in config).
 3. **Bias Selection** — Filters biases above the 0.5 confidence threshold, sorted by confidence descending.
 4. **Explanation** — Groq (llama-3.3-70b-versatile) generates a detailed explanation of each detected bias (falls back to templates if unavailable).
 5. **Neutral Rewrite** — Groq rewrites the statement in neutral, unbiased language.
@@ -32,7 +32,8 @@ User Input  →  Preprocess  →  BART Zero-Shot Classification  →  Bias Selec
 ## Tech Stack
 
 - **Framework:** FastAPI + Uvicorn
-- **Classification Model:** facebook/bart-large-mnli (zero-shot)
+- **Classification Model:** Fine-tuned RoBERTa-base (multi-label, trained on synthetic bias dataset)
+- **Fallback Model:** facebook/bart-large-mnli (zero-shot)
 - **LLM:** Groq — llama-3.3-70b-versatile (explanations & rewrites)
 - **Validation:** Pydantic v2
 - **Testing:** pytest
@@ -73,7 +74,7 @@ GROQ_API_KEY=your-groq-api-key
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
-The BART model (~1.6 GB) downloads automatically on first startup and is cached in `model_cache/`.
+The fine-tuned RoBERTa model (~500 MB) loads from `trained_model/` on startup. To use the zero-shot BART fallback, set `USE_FINETUNED_MODEL = False` in `app/config.py`.
 
 ### 5. Open the docs
 
