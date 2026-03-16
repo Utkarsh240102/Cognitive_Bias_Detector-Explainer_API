@@ -29,3 +29,7 @@ package-lock.json
 trained_model/
 results/
 *.pt
+
+# Intermediate/Draft Files
+data/extra_data.csv
+flow/

@@ -159,11 +159,21 @@ app/
     schemas.py         # Pydantic request/response schemas
   services/
     preprocessor.py    # Text cleaning & validation
-    inference.py       # BART model loading & classification
+    inference.py       # RoBERTa / BART model logic
     bias_selector.py   # Threshold filtering & sorting
     explainer.py       # Explanation generation (Groq + template fallback)
     llm_explainer.py   # Groq client & prompt building
     rewriter.py        # Neutral rewrite generation (Groq)
+scripts/
+  generate_dataset.py  # Groq LLM data generation
+  prepare_dataset.py   # Data cleaning, deduplication, train/val split
+  train.py             # RoBERTa fine-tuning script
+  evaluate.py          # BART vs RoBERTa comparison script
+data/
+  dataset.csv          # Combined 1,972 labeled synthetic examples
+  train.csv            # Training set (80%)
+  val.csv              # Validation set (20%)
+trained_model/         # Saved fine-tuned RoBERTa weights (gitignored)
 tests/
   test_preprocessor.py # Preprocessor unit tests (13 tests)
   test_bias_selector.py# Bias selector unit tests (11 tests)
