@@ -37,8 +37,9 @@ MODEL_NAME = "roberta-base"
 MAX_LENGTH = 128          # Token length (128 is plenty for 1-2 sentence inputs)
 BATCH_SIZE = 4            # Fits in 4 GB VRAM
 LEARNING_RATE = 2e-5
-EPOCHS = 5
+EPOCHS = 10
 WEIGHT_DECAY = 0.01
+WARMUP_RATIO = 0.1
 
 BIAS_LABELS = [
     "Confirmation Bias",
@@ -157,6 +158,7 @@ def main():
         per_device_eval_batch_size=BATCH_SIZE * 2,
         learning_rate=LEARNING_RATE,
         weight_decay=WEIGHT_DECAY,
+        warmup_ratio=WARMUP_RATIO,
         fp16=torch.cuda.is_available(),
         eval_strategy="epoch",
         save_strategy="epoch",
