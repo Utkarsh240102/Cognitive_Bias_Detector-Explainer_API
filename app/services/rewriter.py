@@ -35,7 +35,6 @@ def _build_rewrite_prompt(text: str, biases: list[DetectedBias]) -> str:
         f"- Output only the rewritten statement, nothing else"
     )
 
-
 def generate_rewrite(text: str, biases: list[DetectedBias]) -> str:
     """Return a neutral rewrite of *text*.
 
