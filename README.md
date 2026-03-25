@@ -68,7 +68,7 @@ Create a `.env` file in the project root:
 GROQ_API_KEY=your-groq-api-key
 ```
 
-### 4. Run the server
+### 4. Run the server using the code
 
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000
